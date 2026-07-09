@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZipFM Dovana – Atradimai.lt</title>
+    <meta name="description" content="Gaukite nemokamą Intervizijos metodo aprašymą ir instrukciją ZipFM klausytojams.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-group">
+                <span class="logo-title">Atradimai.lt</span>
+                <span class="logo-subtitle">Atrask ką sugebi geriausiai!</span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="kodel.html" class="nav-link">Kodėl?</a>
+                <a href="faktai-apie-programa.html" class="nav-link">Faktai apie programą</a>
+                <a href="kontaktai.html" class="nav-link">Kontaktai</a>
+                <a href="index.html#register" class="btn btn-primary nav-cta-btn">Registruotis</a>
+            </nav>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Atidaryti meniu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+    <aside class="mobile-nav-sidebar" id="mobile-nav-sidebar">
+        <a href="index.html" class="logo-group" style="margin-bottom: 2rem;">
+            <span class="logo-title">Atradimai.lt</span>
+            <span class="logo-subtitle">Atrask ką sugebi geriausiai!</span>
+        </a>
+        <a href="kodel.html" class="nav-link">Kodėl?</a>
+        <a href="faktai-apie-programa.html" class="nav-link">Faktai apie programą</a>
+        <a href="kontaktai.html" class="nav-link">Kontaktai</a>
+        <a href="index.html#register" class="btn btn-primary" style="margin-top: 1rem;">Registruotis</a>
+    </aside>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <article class="article-container">
+                    <header class="article-header">
+                        <span class="badge">ZipFM Klausytojams</span>
+                        <h1>Gauk dovanų – intervizija</h1>
+                    </header>
+
+                    <div class="article-body">
+                        <p>
+                            Labas! Jeigu esi šiame puslapyje, reiškia klausaisi <strong>ZipFM</strong> :)
+                        </p>
+                        <p>
+                            <strong>Kas yra intervizija?</strong> Tai vienas iš labai efektyvių metodų rasti atsakymą į tau svarbų klausimą. Šio metodo naudojimas padeda geriau suprasti save ir ugdo gebėjimą klausytis kitų bei savęs.
+                        </p>
+                        <p>
+                            Užpildyk žemiau esančią formą ir el. paštu gausi šio naudingo metodo aprašymą su aiškia bei praktiška naudojimo instrukcija.
+                        </p>
+
+                        <form action="thank-you.html" method="POST" style="display: flex; flex-direction: column; gap: 1.25rem; max-width: 450px; margin: 2.5rem auto 0 auto; background: var(--primary-bg); padding: 2rem; border-radius: var(--radius-sm); border: 1px solid var(--line);">
+                            <div class="form-group">
+                                <label for="int-name">Tavo vardas ir pavardė</label>
+                                <input type="text" id="int-name" name="name" class="form-control" placeholder="pvz., Jonas Jonaitis" required style="background-color: var(--paper);">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="int-email">El. pašto adresas</label>
+                                <input type="email" id="int-email" name="email" class="form-control" placeholder="pvz., vardas@pastas.lt" required style="background-color: var(--paper);">
+                            </div>
+
+                            <div style="display: flex; align-items: flex-start; gap: 0.5rem; margin-top: 0.25rem;">
+                                <input type="checkbox" id="int-news" name="newsletter" value="yes" checked style="margin-top: 0.35rem; cursor: pointer;">
+                                <label for="int-news" style="font-size: 0.88rem; color: var(--muted); cursor: pointer; line-height: 1.4;">
+                                    Noriu gauti atradimai.lt naujienas bei patarimus el. paštu
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block" style="margin-top: 1rem; box-shadow: none;">Noriu gauti intervizijos metodą</button>
+                        </form>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="container footer-inner">
+            <div class="footer-copy">
+                &copy; 2026 Atradimai.lt. Visos teisės saugomos.
+            </div>
+            <div class="footer-links">
+                <a href="duk.html" class="hover-underline">D.U.K.</a>
+                <a href="pagalba.html" class="hover-underline">Pagalba</a>
+                <a href="dalyvio-sutartis.html" class="hover-underline">Dalyvio sutartis</a>
+                <a href="terms-and-conditions.html" class="hover-underline">Taisyklės</a>
+                <a href="az-interviu.html" class="hover-underline">Interviu</a>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/talentukarta/" target="_blank" class="social-link" aria-label="Facebook">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+                <a href="https://www.youtube.com/user/talentukarta" target="_blank" class="social-link" aria-label="Youtube">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

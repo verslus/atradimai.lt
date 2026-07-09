@@ -1,0 +1,77 @@
+# Atradimai.lt - Apache Configuration and Redirections
+# Optimized for migrating from WordPress to a static HTML site
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # 1. Force HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # 2. Redirect Legacy WordPress Home Page URL Structure
+    # Redirects index.php query parameters (e.g. ?p=270 or ?p=120) to their static pages
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /\?p=270\ HTTP/
+    RewriteRule ^$ /duk.html? [L,R=301]
+
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /\?p=541\ HTTP/
+    RewriteRule ^$ /pagalba.html? [L,R=301]
+
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /\?p=532\ HTTP/
+    RewriteRule ^$ /dalyvio-sutartis.html? [L,R=301]
+
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /\?p=160\ HTTP/
+    RewriteRule ^$ /terms-and-conditions.html? [L,R=301]
+
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /\?p=634\ HTTP/
+    RewriteRule ^$ /isbandyk-1-treniruote-uz-1-eu.html? [L,R=301]
+
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /\?p=253\ HTTP/
+    RewriteRule ^$ /registracijos-patvirtinimas.html? [L,R=301]
+
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /\?p=650\ HTTP/
+    RewriteRule ^$ /registracijos-patvirtinimas-isbandyk.html? [L,R=301]
+
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /\?p=718\ HTTP/
+    RewriteRule ^$ /gauk-dovanu-intervizija.html? [L,R=301]
+
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /\?p=537\ HTTP/
+    RewriteRule ^$ /az-interviu.html? [L,R=301]
+
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /\?p=27\ HTTP/
+    RewriteRule ^$ /thank-you.html? [L,R=301]
+
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /\?p=672\ HTTP/
+    RewriteRule ^$ /kodel.html? [L,R=301]
+
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /\?p=598\ HTTP/
+    RewriteRule ^$ /faktai-apie-programa.html? [L,R=301]
+
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /\?p=275\ HTTP/
+    RewriteRule ^$ /kontaktai.html? [L,R=301]
+
+    # 3. Clean URLs - Support URLs without .html extension (e.g. /duk -> duk.html)
+    # If the request is for a file or directory that exists, serve it directly
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^([^/]+)$ $1.html [L]
+
+    # 4. Redirect legacy WordPress pretty URL structure (e.g. /duk/ -> /duk)
+    RewriteRule ^duk/?$ /duk.html [L,R=301]
+    RewriteRule ^pagalba/?$ /pagalba.html [L,R=301]
+    RewriteRule ^dalyvio-sutartis/?$ /dalyvio-sutartis.html [L,R=301]
+    RewriteRule ^terms-and-conditions/?$ /terms-and-conditions.html [L,R=301]
+    RewriteRule ^isbandyk-1-treniruote-uz-1-eu/?$ /isbandyk-1-treniruote-uz-1-eu.html [L,R=301]
+    RewriteRule ^registracijos-patvirtinimas/?$ /registracijos-patvirtinimas.html [L,R=301]
+    RewriteRule ^registracijos-patvirtinimas-isbandyk/?$ /registracijos-patvirtinimas-isbandyk.html [L,R=301]
+    RewriteRule ^gauk-dovanu-intervizija/?$ /gauk-dovanu-intervizija.html [L,R=301]
+    RewriteRule ^az-interviu/?$ /az-interviu.html [L,R=301]
+    RewriteRule ^thank-you/?$ /thank-you.html [L,R=301]
+    RewriteRule ^kodel/?$ /kodel.html [L,R=301]
+    RewriteRule ^faktai-apie-programa/?$ /faktai-apie-programa.html [L,R=301]
+    RewriteRule ^kontaktai/?$ /kontaktai.html [L,R=301]
+
+    # 5. Handle Custom 404 Error
+    ErrorDocument 404 /404.html
+</IfModule>

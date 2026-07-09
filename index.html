@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atradimai.lt – Atrask ką sugebi geriausiai!</title>
+    <meta name="description" content="Atradimai.lt – 7 savaičių nuotolinė savęs pažinimo programa. Sužinok savo stipriąsias puses, atrask vidinius norus ir panaudok savo potencialą.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-group">
+                <span class="logo-title">Atradimai.lt</span>
+                <span class="logo-subtitle">Atrask ką sugebi geriausiai!</span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="kodel.html" class="nav-link">Kodėl?</a>
+                <a href="faktai-apie-programa.html" class="nav-link">Faktai apie programą</a>
+                <a href="kontaktai.html" class="nav-link">Kontaktai</a>
+                <a href="#register" class="btn btn-primary nav-cta-btn">Registruotis</a>
+            </nav>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Atidaryti meniu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+    <aside class="mobile-nav-sidebar" id="mobile-nav-sidebar">
+        <a href="index.html" class="logo-group" style="margin-bottom: 2rem;">
+            <span class="logo-title">Atradimai.lt</span>
+            <span class="logo-subtitle">Atrask ką sugebi geriausiai!</span>
+        </a>
+        <a href="kodel.html" class="nav-link">Kodėl?</a>
+        <a href="faktai-apie-programa.html" class="nav-link">Faktai apie programą</a>
+        <a href="kontaktai.html" class="nav-link">Kontaktai</a>
+        <a href="#register" class="btn btn-primary" style="margin-top: 1rem;">Registruotis</a>
+    </aside>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="section">
+            <div class="container hero-wrapper">
+                <div class="hero-text">
+                    <span class="badge">Nuotolinė Programa</span>
+                    <h1 class="hero-title">7 savaičių savęs pažinimo programa</h1>
+                    
+                    <p class="hero-subtitle">
+                        Mes turime tūkstančius kartų daugiau galimybių nei mūsų tėvai ar seneliai. Mes turime daug daugiau laisvės, tačiau kartu su ja – ir atsakomybės. Nuo mūsų pačių priklauso, kiek mes pasinaudosime mums atitekusiomis galimybėmis, kiek pasieksime gyvenime ir kokie laimingi būsime.
+                    </p>
+
+                    <p>
+                        <strong>Atradimai.lt</strong> – 7 savaičių nuotolinė programa, skirta suprasti, kur tu esi geriausias, kokie tavo vidiniai norai ir kaip išmokti panaudoti savo potencialą.
+                    </p>
+
+                    <ul class="hero-bullet-list">
+                        <li class="hero-bullet-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Atrask savo vidinius norus
+                        </li>
+                        <li class="hero-bullet-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Sužinok, ką gali daryti geriausiai
+                        </li>
+                        <li class="hero-bullet-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Išmok motyvuoti save ir panaudoti savo potencialą
+                        </li>
+                        <li class="hero-bullet-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Dalyvauk nuotolinėje 7 savaičių programoje
+                        </li>
+                    </ul>
+
+                    <div class="hero-buttons">
+                        <a href="#register" class="btn btn-primary">Registruotis dabar</a>
+                        <a href="#how-it-works" class="btn btn-secondary">Kaip viskas vyks?</a>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrap">
+                    <svg viewBox="0 0 400 400" width="100%" height="100%" fill="none" style="background-color: var(--primary); display:block;">
+                        <defs>
+                            <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#f5d061"/>
+                                <stop offset="100%" stop-color="#d4a325"/>
+                            </linearGradient>
+                            <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#2a6649" stop-opacity="0.5"/>
+                                <stop offset="100%" stop-color="#113222" stop-opacity="0"/>
+                            </radialGradient>
+                        </defs>
+                        <rect width="400" height="400" fill="url(#glow)" />
+                        <!-- Decorative abstract shape representing discovery -->
+                        <circle cx="200" cy="200" r="110" stroke="rgba(255,255,255,0.06)" stroke-width="2" />
+                        <circle cx="200" cy="200" r="80" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" />
+                        <circle cx="200" cy="200" r="50" stroke="url(#gold-grad)" stroke-width="1" stroke-dasharray="4 4" />
+                        <!-- Spark / Star shape -->
+                        <path d="M200 130 L205 185 L260 190 L205 195 L200 250 L195 195 L140 190 L195 185 Z" fill="url(#gold-grad)" />
+                        <circle cx="200" cy="190" r="5" fill="#ffffff" />
+                    </svg>
+                    <div class="hero-image-overlay">
+                        <div class="speaker-title">Atrask ką sugebi geriausiai</div>
+                        <p>7 savaičių asmeninio potencialo ir tikrųjų tikslų išgryninimo kelionė.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pillars Section -->
+        <section class="section" style="background-color: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <h2 class="section-title">Programos pamatai</h2>
+                    <p class="section-lead">Trys pagrindinės sritys, kuriomis remiasi sėkmingas asmeninis augimas ir savęs pažinimas.</p>
+                </div>
+
+                <div class="pillars-grid">
+                    <!-- Pillar 1 -->
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <h3>Stipriosios pusės</h3>
+                        <p>Aukščiausių rezultatų gali pasiekti darydamas tai, ką moki geriausiai. Ar tu žinai savo stipriąsias puses? Surask atsakymą į šį klausimą!</p>
+                    </div>
+                    <!-- Pillar 2 -->
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-16h-9l1-4z"/></svg>
+                        </div>
+                        <h3>Motyvacija</h3>
+                        <p>Pergalėms pasiekti reikia daug vidinės energijos, kuri kyla iš motyvacijos. Atrask savo motyvacijos šaltinį ir išmok save motyvuoti!</p>
+                    </div>
+                    <!-- Pillar 3 -->
+                    <div class="pillar-card">
+                        <div class="pillar-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18M23 6h-6M23 6v6"/></svg>
+                        </div>
+                        <h3>Augimas</h3>
+                        <p>Suformuok įpročius, kurie padės tau geriau save pažinti, nuolatos augti bei ugdytis reikalingas kompetencijas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Split Quick Forms Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <h2 class="section-title">Susisiekime</h2>
+                    <p class="section-lead">Užsiprenumeruokite programos naujienas arba užduokite mums bet kokį dominantį klausimą tiesiogiai.</p>
+                </div>
+
+                <div class="cta-forms-split">
+                    <!-- Newsletter Form -->
+                    <div class="cta-form-card">
+                        <div>
+                            <h3>Prenumeruoti naujienas</h3>
+                            <p>Gaukite naujienas, naudingus patarimus bei informaciją apie būsimas programas tiesiai į savo el. pašto dėžutę.</p>
+                        </div>
+                        <form action="thank-you.html" method="POST" style="margin-top: 1.5rem;">
+                            <input type="hidden" name="source" value="Naujienų prenumerata">
+                            <div class="form-group">
+                                <label for="news-email">El. pašto adresas</label>
+                                <input type="email" id="news-email" name="email" class="form-control" placeholder="pvz., vardas@pastas.lt" required>
+                            </div>
+                            <button type="submit" class="btn btn-dark form-submit-btn">Prenumeruoti</button>
+                        </form>
+                    </div>
+
+                    <!-- Question Form -->
+                    <div class="cta-form-card">
+                        <div>
+                            <h3>Užduok mums klausimą</h3>
+                            <p>Turite dvejonių ar klausimų apie programos eigą? Parašykite mums ir mes mielai jums atsakysime asmeniškai.</p>
+                        </div>
+                        <form action="thank-you.html" method="POST" style="margin-top: 1.5rem;">
+                            <input type="hidden" name="source" value="Klausimas iš pagrindinio puslapio">
+                            <div class="form-group">
+                                <label for="question-email">El. pašto adresas</label>
+                                <input type="email" id="question-email" name="email" class="form-control" placeholder="pvz., vardas@pastas.lt" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="question-text">Jūsų klausimas</label>
+                                <textarea id="question-text" name="message" class="form-control" placeholder="Įrašykite savo klausimą čia..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary form-submit-btn">Užduoti klausimą</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Audience Section -->
+        <section class="section" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+            <div class="container">
+                <div class="audience-section">
+                    <h2>Kam skirta ši programa?</h2>
+                    <p class="audience-intro">Programa pritaikyta savarankiškam tobulėjimui ir tinka kiekvienam, pasiryžusiam pažinti save.</p>
+                    
+                    <div class="audience-grid">
+                        <div class="audience-item">
+                            <span class="audience-icon">✓</span>
+                            <span class="audience-text">Žmonėms, kurie nori augti kaip asmenybės.</span>
+                        </div>
+                        <div class="audience-item">
+                            <span class="audience-icon">✓</span>
+                            <span class="audience-text">Siekia labiau pažinti save ir savarankiškai mokytis.</span>
+                        </div>
+                        <div class="audience-item">
+                            <span class="audience-icon">✓</span>
+                            <span class="audience-text">Žmonėms, kurie yra linkę ieškoti galimybių, o ne pasiteisinimų.</span>
+                        </div>
+                        <div class="audience-item">
+                            <span class="audience-icon">✓</span>
+                            <span class="audience-text">Asmenybėms, kurios mokosi prisiimti atsakomybę už savo gyvenimą.</span>
+                        </div>
+                    </div>
+
+                    <div class="audience-footer">
+                        Atradimai.lt programą dažniausiai renkasi 20-ies – 30-ies amžiaus žmonės, tačiau ji yra tinkama visiems, kurie yra pasiruošę mokytis, keistis bei pažinti save.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pain Points / Needs Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="badge">Savirefleksija</span>
+                    <h2 class="section-title">Su kokiais iššūkiais susiduriate?</h2>
+                    <p class="section-lead">Ši programa sukurta padėti atsakyti į esminius gyvenimo klausimus, kurie dažnai kelia pasimetimą.</p>
+                </div>
+
+                <div class="needs-grid">
+                    <!-- Card 1 -->
+                    <div class="need-card">
+                        <div class="need-number">01</div>
+                        <h3>Nežinau, ko noriu</h3>
+                        <p>Ko nori ne mano tėvai, ne mokykla, ne visuomenė, o būtent aš? Kaip atrasti savo tikruosius norus?</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="need-card">
+                        <div class="need-number">02</div>
+                        <h3>Nežinau, kokie mano tikslai</h3>
+                        <p>Visi aplinkui šaukia: „turėk tikslus“, „siek savo gyvenimo tikslo“, tačiau aš nežinau kokie mano gyvenimo tikslai. Noriu juos atrasti, išmokti išsikelti ir pasiekti.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="need-card">
+                        <div class="need-number">03</div>
+                        <h3>Noras atrasti mėgstamą veiklą</h3>
+                        <p>Noriu suprasti, kokia veikla man suteikia daugiausiai pasitenkinimo ir džiaugsmo. Kam turiu daug motyvacijos ir entuziazmo veikti, kad nereikėtų laukti „spyrio į užpakalį“.</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="need-card">
+                        <div class="need-number">04</div>
+                        <h3>Noriu daugiau tobulėti</h3>
+                        <p>Man svarbu nuolatos augti ir tobulėti. Žinau, kad norėdamas pasiekti aukštų rezultatų, turiu skirti dėmesio asmeniniam augimui.</p>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="need-card">
+                        <div class="need-number">05</div>
+                        <h3>Žinau, kad galiu daugiau</h3>
+                        <p>Kiekvienas kurioje nors srityje yra gabus, aš - ne išimtis, tačiau nežinau, kokia tai sritis ir kaip galiu panaudoti savo talentus.</p>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="need-card">
+                        <div class="need-number">06</div>
+                        <h3>Noriu sužinoti, ką galiu daryti geriausiai</h3>
+                        <p>Noriu suprasti, ką veikdamas galiu pasiekti aukščiausių rezultatų, o dar svarbiau – noriu atrasti veiklą, kuri yra prasminga, kurios pasiekimai džiugina ir kuria užsiimdamas esu laimingas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="section" id="how-it-works" style="background-color: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="badge">Eiga</span>
+                    <h2 class="section-title">Kaip viskas vyks?</h2>
+                    <p class="section-lead">Kiekvieną sekmadienį 20-21 val. elektroniniu paštu tu gausi visą reikalingą medžiagą.</p>
+                </div>
+
+                <div class="timeline-wrapper">
+                    <div class="timeline-line"></div>
+                    
+                    <!-- Step 1 -->
+                    <div class="timeline-step">
+                        <div class="timeline-badge"></div>
+                        <div class="timeline-content">
+                            <h3>Kas savaitę siunčiamo el. laiško turinys</h3>
+                            <ul class="timeline-list">
+                                <li>Temos pristatymas.</li>
+                                <li>Užduotis ir jos atlikimo žingsniai.</li>
+                                <li>Rekomendacijos, padėsiančios kokybiškai atlikti užduotį.</li>
+                                <li>Atsakymai į dažniausiai užduodamus klausimus.</li>
+                                <li>Klausimai refleksijai.</li>
+                                <li>Speciali forma, padėsianti įvertinti rezultatus.</li>
+                                <li>Papildoma informacija, norintiems pasidomėti savaitės tema plačiau.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="timeline-step">
+                        <div class="timeline-badge"></div>
+                        <div class="timeline-content">
+                            <h3>Reikalavimai laikui</h3>
+                            <p>Produktyviai dalyvauti programoje užtenka tik <strong>2-4 val. per savaitę</strong>.</p>
+                            <p>El. paštu tu gausi viską, ko reikia, norint kokybiškai dalyvauti programoje. Programoje pateiksime istorijas, kurios padės geriau suprasti pasirinktas užduočių bei savaitės temas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="timeline-step">
+                        <div class="timeline-badge"></div>
+                        <div class="timeline-content">
+                            <h3>Programoje tu rasi atsakymus į šiuos klausimus</h3>
+                            <ul class="timeline-list">
+                                <li>Kas yra primesti norai ir kaip atrasti savo tikruosius norus?</li>
+                                <li>Kaip dalyvaudamas programoje galiu gauti kuo daugiau naudos?</li>
+                                <li>Kokios yra mano tikrosios vertybės? Kas man yra svarbu?</li>
+                                <li>Kaip išmokti save motyvuoti? Kokiai veiklai turiu daugiausiai motyvacijos?</li>
+                                <li>Kaip pasiekti aukščiausių rezultatų? Kokie yra mano talentai?</li>
+                                <li>Kaip atrasti savyje energijos ir kaip ją valdyti?</li>
+                                <li>Kaip susikurti aplinką, kurioje tobulėju ir pasiekiu geriausių rezultatų?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Methods block -->
+                <div class="info-expandable-box">
+                    <h3>Metodika ir įrankiai</h3>
+                    <p class="text-center" style="margin-bottom: 2rem;">Programoje taikomi kokybiškiausi, universaliausi bei pažangiausi tobulėjimo metodai. Dalyvaudamas atradimai.lt programoje tu pažinsi ir išbandysi šiuos:</p>
+                    <div class="methods-grid">
+                        <div class="method-item">
+                            <span class="method-marker"></span>
+                            <span class="method-text">Metodą, kuris taikomas Holivudo režisieriams ir menininkams;</span>
+                        </div>
+                        <div class="method-item">
+                            <span class="method-marker"></span>
+                            <span class="method-text">Harvardo verslo mokyklos karjeros centro naudojamą savęs pažinimo metodą;</span>
+                        </div>
+                        <div class="method-item">
+                            <span class="method-marker"></span>
+                            <span class="method-text">Primestų ir vidinių norų analizę;</span>
+                        </div>
+                        <div class="method-item">
+                            <span class="method-marker"></span>
+                            <span class="method-text">Saviugdos specialistų pamėgtus savęs pažinimo įrankius;</span>
+                        </div>
+                        <div class="method-item">
+                            <span class="method-marker"></span>
+                            <span class="method-text">Savų poreikių analizei skirtą klausimyną;</span>
+                        </div>
+                        <div class="method-item">
+                            <span class="method-marker"></span>
+                            <span class="method-text">100 norų, 100 klausimų bei 100 gyvenimo pasiekimų pratimus, padedančius geriau pažinti save;</span>
+                        </div>
+                        <div class="method-item">
+                            <span class="method-marker"></span>
+                            <span class="method-text">Sąryšio tarp savęs ir aplinkos analizę.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="badge">Atsiliepimai</span>
+                    <h2 class="section-title">Ką sako dalyviai apie programą?</h2>
+                    <p class="section-lead">Tikros patirtys iš žmonių, kurie praėjo 7 savaičių savęs pažinimo treniruotę.</p>
+                </div>
+
+                <div class="testimonials-slider">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">
+                            Labiausiai patiko gaunami laiškai. Kiekvieną sekmadienį laukdavau laiško ir su malonumu skaitydavau jį kelis kartus, nes laiškuose išdėstytos mintys labai vertingos!
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">J</div>
+                            <div class="author-info">
+                                <h4>Justina</h4>
+                                <span>Dalyvė</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">
+                            Įsiminė norai. Galvojau kad bus lengvai įveikiama užduotis. Tačiau tai buvo pakankamai sunku kaip ir pasiekimai. Labai patiko motyvacinį laišką rašyti. Tai lyg pokalbis su pačiu savim taip retai būna.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">M</div>
+                            <div class="author-info">
+                                <h4>Mantas</h4>
+                                <span>Dalyvis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">
+                            Labai patiko papildoma medžiaga. Į savo klausimus radau atsakymus, perskaičius rekomenduojamas knygas. Todėl programoje vertėjo dalyvauti vien dėl tų knygų, kuriose radau man labai svarbius dalykus. Ačiū.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">E</div>
+                            <div class="author-info">
+                                <h4>Elena</h4>
+                                <span>Dalyvė</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">
+                            Labai efektyvus ir patogus būdas giliau pažinti save. Dalintasi labai vertinga informacija. Pasitikiu žmonėmis, kurie visą tai ruošia.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">A</div>
+                            <div class="author-info">
+                                <h4>Andrius</h4>
+                                <span>Dalyvis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">
+                            Užtenka tik kelių valandų per savaitę ir gali išsigrįninti savo norus, veiklas kuriose jautiesi gerai. Netikėjau kad turiu tiek norų ir tiek jau pasiektų gerų dalykų.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">V</div>
+                            <div class="author-info">
+                                <h4>Viktorija</h4>
+                                <span>Dalyvė</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 6 -->
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">
+                            Man labai patiko kas savaitę gauti užduotis. Malonus buvo laukimas.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">T</div>
+                            <div class="author-info">
+                                <h4>Tomas</h4>
+                                <span>Dalyvis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 7 -->
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">
+                            Aiški ir paprasta programa. Visi norintys ir ieškantys savęs pažinimo ir tobulinimo būdų – jų tikrai ras.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">K</div>
+                            <div class="author-info">
+                                <h4>Karolina</h4>
+                                <span>Dalyvė</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 8 -->
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">
+                            Kiekviena užduotis buvo įdomi, skirtinga. Sukėlė skirtingas emocijas bei leido vis iš naujo atrasti kažką naujo. Labiausiai privertusi padirbėti ir sukėlusi daugiausiai gerų emocijų buvo 100 gyvenimo pasiekimų užduotis.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">R</div>
+                            <div class="author-info">
+                                <h4>Rokas</h4>
+                                <span>Dalyvis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 9 -->
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">
+                            Noriu pasidžiaugti, kad dalyvavau šioje programoje, nors kartais nevisai sekdavosi skirti tiek laiko kiek norėčiau, o tuomet kaltini kad stinga įgūdžių planuoti savo laiką. Programos metu, jausdavau kad užduotys buvo labai nuoširdžios, o kai skaitydavai jas, jausdavai lyg kažkas tau pasakotų tai. O ir 7 savaitės prabėgo taip greitai.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">S</div>
+                            <div class="author-info">
+                                <h4>Simona</h4>
+                                <span>Dalyvė</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section class="section" style="border-top: 1px solid var(--line); background-color: var(--primary-bg);">
+            <div class="container">
+                <div class="section-title-wrap" style="text-align: center; margin-bottom: 3rem;">
+                    <span class="badge">Autoritetai</span>
+                    <h2 class="section-title">Programą rekomenduoja</h2>
+                    <p class="section-lead" style="max-width: 600px; margin: 1rem auto 0 auto; color: var(--muted);">Žinomi visuomenės veikėjai, psichoterapeutai ir jaunimo organizacijų vadovai, vertinantys programos teikiamą naudą asmeniniam augimui.</p>
+                </div>
+
+                <div class="recommenders-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                    <!-- Recommender 1 -->
+                    <div class="recommender-card" style="background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 2rem; text-align: center; box-shadow: var(--shadow-sm);">
+                        <div class="avatar-circle" style="width: 70px; height: 70px; border-radius: 50%; background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto 1.25rem auto;">AV</div>
+                        <h3 style="font-size: 1.15rem; color: var(--primary); margin-bottom: 0.5rem; font-family: var(--font-heading);">Aidas Vagonis</h3>
+                        <p style="font-size: 0.88rem; color: var(--muted); margin: 0; line-height: 1.4;">Jaunimo linijos Kauno padalinio vadovas</p>
+                    </div>
+
+                    <!-- Recommender 2 -->
+                    <div class="recommender-card" style="background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 2rem; text-align: center; box-shadow: var(--shadow-sm);">
+                        <div class="avatar-circle" style="width: 70px; height: 70px; border-radius: 50%; background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto 1.25rem auto;">OL</div>
+                        <h3 style="font-size: 1.15rem; color: var(--primary); margin-bottom: 0.5rem; font-family: var(--font-heading);">Olegas Lapinas</h3>
+                        <p style="font-size: 0.88rem; color: var(--muted); margin: 0; line-height: 1.4;">Psichoterapeutas</p>
+                    </div>
+
+                    <!-- Recommender 3 -->
+                    <div class="recommender-card" style="background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 2rem; text-align: center; box-shadow: var(--shadow-sm);">
+                        <div class="avatar-circle" style="width: 70px; height: 70px; border-radius: 50%; background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto 1.25rem auto;">MZ</div>
+                        <h3 style="font-size: 1.15rem; color: var(--primary); margin-bottom: 0.5rem; font-family: var(--font-heading);">Mantas Zakarka</h3>
+                        <p style="font-size: 0.88rem; color: var(--muted); margin: 0; line-height: 1.4;">Lietuvos jaunimo organizacijų tarybos prezidentas</p>
+                    </div>
+
+                    <!-- Recommender 4 -->
+                    <div class="recommender-card" style="background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 2rem; text-align: center; box-shadow: var(--shadow-sm);">
+                        <div class="avatar-circle" style="width: 70px; height: 70px; border-radius: 50%; background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto 1.25rem auto;">MB</div>
+                        <h3 style="font-size: 1.15rem; color: var(--primary); margin-bottom: 0.5rem; font-family: var(--font-heading);">Mindaugas Busila</h3>
+                        <p style="font-size: 0.88rem; color: var(--muted); margin: 0; line-height: 1.4;">„Verslauk“ vadovas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section" style="background-color: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+            <div class="container">
+                <div class="section-title-wrap">
+                    <span class="badge">D.U.K.</span>
+                    <h2 class="section-title">Dažniausiai užduodami klausimai</h2>
+                    <p class="section-lead">Atsakymai į klausimus apie programos kainą, efektyvumą ir laiko planavimą.</p>
+                </div>
+
+                <div class="accordion">
+                    <!-- FAQ 1 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Kiek kainuoja programa?
+                            <span class="accordion-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-content-inner">
+                                Visos 7 savaičių programos kaina yra 37 €. Atradimai.lt – tai kokybiškas 7 savaičių trukmės savarankiško tobulėjimo kursas už prieinamą kainą. Į jį sudėjome geriausias pasaulio praktikas. Skyrėme turimą patirtį, daug dėmesio. Dalyvaudamas savarankiškai, gali sutaupyti pinigų, įgyti vertingų žinių bei išsiugdyti įpročius, padedančius sukurti savo sėkmę. Tau tereikia norėti ir žengti pirmąjį žingsnį.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Kur vyksta programa? Ar reikia kažkur važiuoti?
+                            <span class="accordion-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-content-inner">
+                                Važiuoti niekur nereikės, nes programa yra nuotolinė, t.y. viskas vyksta internetu. Užtenka turėti el. pašto adresą ir prieigą prie interneto.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Ar toks mokymosi būdas yra efektyvus?
+                            <span class="accordion-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-content-inner">
+                                Savarankiškas mokymasis, taikant kokybiškus, visame pasaulyje pripažintus metodus, yra efektyvesnis nei paskaitų ar seminarų lankymas. Atradimai.lt programa skatina ne tik teoriškai suprasti svarbius dalykus, bet ir taikyti įgytas žinias kasdieniame gyvenime. Programoje yra daug kokybiškų užduočių, kurios pateikiamos taip, kad kiekvienas norintis gali jas atlikti.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Ar pavyks rasti laiko dalyvauti programoje?
+                            <span class="accordion-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-content-inner">
+                                Didžiajai daugumai (87%) dalyvių užtenka skirti programai 2 – 4 val. per savaitę. Tiek laiko sau atrasti gali kiekvienas. Programoje daug dėmesio skiriama motyvacijai, kuri tiesiogiai susijusi ir su gebėjimu motyvuoti save, tobulėti bei augti. Daugiau nei 80% dalyvių pabaigia programą.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Ar programa yra kokybiška ir patikima?
+                            <span class="accordion-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-content-inner">
+                                <a href="faktai-apie-programa.html" style="color: var(--accent); font-weight: 600; text-decoration: underline;">Čia gali peržvelgti dalyvių vertinimus ir atsiliepimus.</a> 2015 metais programą pabaigė daugiau nei 200 žmonių. Programa iškart nepakeis viso tavo gyvenimo, nes dideliems pokyčiams reikia laiko. Tačiau ji tikrai padės tobulėti tavo asmenybei, duos įrankius, padėsiančius tvarkyti tavo gyvenimą bei atskleis metodus, kurie leis geriau atrasti bei pažinti savo talentus. Jeigu turi daugiau klausimų apie programą, juos gali užduoti kontaktai puslapyje arba tiesiogiai. Mes mielai atsakysime!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Registration Section -->
+        <section class="section" id="register">
+            <div class="container">
+                <div class="footer-cta">
+                    <h2>Programa prasideda jau šį sekmadienį</h2>
+                    <p>Ženk pirmąjį žingsnį link geresnio savęs pažinimo jau dabar. Investuok į save ir skirk dėmesio asmeniniam augimui.</p>
+                    
+                    <div class="footer-pricing">
+                        7 savaičių programos kaina tik 37 €
+                    </div>
+
+                    <div class="footer-buttons">
+                        <!-- Simulated registration CTA -->
+                        <form action="registracijos-patvirtinimas.html" method="POST" style="display:flex; gap:0.5rem; flex-wrap:wrap; justify-content:center; width:100%; max-width:500px; margin: 0 auto;">
+                            <input type="email" name="email" class="form-control" placeholder="Jūsų el. pašto adresas" required style="max-width:320px; background-color: var(--paper); border:none;">
+                            <button type="submit" class="btn btn-primary" style="box-shadow:none;">Registruotis</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="container footer-inner" style="flex-wrap: wrap; gap: 1rem;">
+            <div class="footer-copy">
+                &copy; 2026 Atradimai.lt. Visos teisės saugomos.
+            </div>
+            <div class="footer-links" style="display: flex; gap: 1.5rem; font-size: 0.85rem; color: var(--muted); flex-wrap: wrap;">
+                <a href="duk.html" class="hover-underline">D.U.K.</a>
+                <a href="pagalba.html" class="hover-underline">Pagalba</a>
+                <a href="dalyvio-sutartis.html" class="hover-underline">Dalyvio sutartis</a>
+                <a href="terms-and-conditions.html" class="hover-underline">Taisyklės</a>
+                <a href="az-interviu.html" class="hover-underline">Interviu</a>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/talentukarta/" target="_blank" class="social-link" aria-label="Facebook">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+                <a href="https://www.youtube.com/user/talentukarta" target="_blank" class="social-link" aria-label="Youtube">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

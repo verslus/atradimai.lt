@@ -6,6 +6,34 @@
     <title>Atradimai.lt – Atrask ką sugebi geriausiai!</title>
     <meta name="description" content="Atradimai.lt – 7 savaičių nuotolinė savęs pažinimo programa. Sužinok savo stipriąsias puses, atrask vidinius norus ir panaudok savo potencialą.">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4BMDBU63"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-4BMDBU63');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1655429024726942');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1655429024726942&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
 </head>
 <body>
 
@@ -168,6 +196,7 @@
                             <p>Gaukite naujienas, naudingus patarimus bei informaciją apie būsimas programas tiesiai į savo el. pašto dėžutę.</p>
                         </div>
                         <form action="thank-you.html" method="POST" style="margin-top: 1.5rem;">
+    <input type="text" name="website_url" style="display:none" autocomplete="off">
                             <input type="hidden" name="source" value="Naujienų prenumerata">
                             <div class="form-group">
                                 <label for="news-email">El. pašto adresas</label>
@@ -184,6 +213,7 @@
                             <p>Turite dvejonių ar klausimų apie programos eigą? Parašykite mums ir mes mielai jums atsakysime asmeniškai.</p>
                         </div>
                         <form action="thank-you.html" method="POST" style="margin-top: 1.5rem;">
+    <input type="text" name="website_url" style="display:none" autocomplete="off">
                             <input type="hidden" name="source" value="Klausimas iš pagrindinio puslapio">
                             <div class="form-group">
                                 <label for="question-email">El. pašto adresas</label>
@@ -660,6 +690,7 @@
                     <div class="footer-buttons">
                         <!-- Simulated registration CTA -->
                         <form action="registracijos-patvirtinimas.html" method="POST" style="display:flex; gap:0.5rem; flex-wrap:wrap; justify-content:center; width:100%; max-width:500px; margin: 0 auto;">
+    <input type="text" name="website_url" style="display:none" autocomplete="off">
                             <input type="email" name="email" class="form-control" placeholder="Jūsų el. pašto adresas" required style="max-width:320px; background-color: var(--paper); border:none;">
                             <button type="submit" class="btn btn-primary" style="box-shadow:none;">Registruotis</button>
                         </form>

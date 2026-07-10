@@ -27,6 +27,19 @@ function clean_input($data) {
 
 // Check for POST data
 if ($method === 'POST') {
+    // Honeypot check
+    if (!empty($_POST['website_url'])) {
+        // This is a bot submission, exit silently or return success to fool the bot
+        if (isset($_POST['ajax']) || (isset($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false)) {
+            header('Content-Type: application/json');
+            echo json_encode(['success' => true, 'redirect' => 'thank-you.html']);
+            exit;
+        } else {
+            header("Location: thank-you.html");
+            exit;
+        }
+    }
+
     // Get form data
     $name = isset($_POST['name']) ? clean_input($_POST['name']) : '';
     $email = isset($_POST['email']) ? clean_input($_POST['email']) : '';

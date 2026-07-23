@@ -15,6 +15,15 @@ function json_response(int $status, array $payload): never {
     exit;
 }
 
+function success_response(string $redirect): never {
+    $accept = $_SERVER['HTTP_ACCEPT'] ?? '';
+    if (($_POST['ajax'] ?? '') === '1' || str_contains($accept, 'application/json')) {
+        json_response(200, ['success' => true, 'redirect' => $redirect]);
+    }
+    header('Location: ' . $redirect, true, 303);
+    exit;
+}
+
 function input(string $name, int $max = 3000): string {
     $value = trim((string) ($_POST[$name] ?? ''));
     return mb_substr($value, 0, $max);
@@ -89,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 if (input('website_url') !== '') {
-    json_response(200, ['success' => true, 'redirect' => 'thank-you.html']);
+    success_response('thank-you.html');
 }
 
 try {
@@ -151,7 +160,7 @@ try {
         curl_exec($request);
         curl_close($request);
     }
-    json_response(200, ['success' => true, 'redirect' => $redirect]);
+    success_response($redirect);
 } catch (\Throwable $exception) {
     error_log('Atradimai form error: ' . $exception->getMessage());
     json_response(503, ['success' => false, 'message' => 'Formos šiuo metu nepavyko išsiųsti. Bandykite vėliau arba parašykite mums el. paštu.']);

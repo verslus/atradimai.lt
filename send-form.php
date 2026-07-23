@@ -66,11 +66,11 @@ function upload_contract(string $directory): ?array {
 function send_mail(string $recipient, string $replyTo, string $subject, string $body, ?array $attachment): void {
     $mail = new PHPMailer(true);
     $mail->isSMTP();
-    $mail->Host = 'smtp.resend.com';
+    $mail->Host = 'smtp.purelymail.com';
     $mail->Port = 587;
     $mail->SMTPAuth = true;
-    $mail->Username = 'resend';
-    $mail->Password = env_required('RESEND_API_KEY');
+    $mail->Username = env_required('PURELYMAIL_SMTP_USERNAME');
+    $mail->Password = env_required('PURELYMAIL_SMTP_PASSWORD');
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->CharSet = 'UTF-8';
     $mail->setFrom(env_required('MAIL_FROM_EMAIL'), getenv('MAIL_FROM_NAME') ?: 'Atradimai.lt');

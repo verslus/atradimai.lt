@@ -14,10 +14,10 @@ Statinė Atradimai.lt svetainė su PHP formų endpointu, skirta diegti per Nginx
 
 Nukopijuokite `.env.example` į saugią serverio vietą, pavyzdžiui `/etc/atradimai/atradimai.env`, ir įkelkite jos reikšmes į PHP-FPM aplinką. Niekada nekelkite `.env` failo į Git ar web root.
 
-Mokėjimo mygtukas nukreipia į `payment.php`. Jis veiks tik tada, kai serveryje nustatytas galiojantis HTTPS `PAYSERA_PAYMENT_URL`. Paysera projekto slaptažodžių šiame repozitoriume nėra ir negali būti.
+Formos siunčiamos per Resend SMTP. Serveryje nustatykite `RESEND_API_KEY` ir prieš tai Resend paskyroje patvirtinkite `atradimai.lt` siuntimo domeną. Paysera mokėjimo integracija naudoja `PAYSERA_PROJECT_ID` ir `PAYSERA_SIGN_PASSWORD`; abu parametrai laikomi tik `/etc/atradimai/atradimai.env`. Senasis istorinis Paysera slaptažodis yra kompromituotas ir negali būti naudojamas.
 
 ## Saugumas
 
 - Istoriniai klientų duomenys, WordPress kopijos ir nepublikuojami dokumentai nėra diegimo paketo dalis.
 - Formų pateikimai ir sutartys turi būti saugomi tik kataloguose, nurodytuose `FORM_DATA_DIR` ir `FORM_UPLOAD_DIR`.
-- Prieš produkcinį diegimą atlikite SMTP, Paysera, failo įkėlimo, 301 peradresavimų ir mobiliojo vaizdo testus.
+- Prieš produkcinį diegimą atlikite Resend, Paysera callback, failo įkėlimo, 301 peradresavimų ir mobiliojo vaizdo testus.

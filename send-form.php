@@ -3,28 +3,8 @@ declare(strict_types=1);
 
 use PHPMailer\PHPMailer\PHPMailer;
 
-function load_server_config(): void {
-    $path = getenv('ATRADIMAI_CONFIG_PATH') ?: '/etc/atradimai/atradimai.env';
-    if (!is_readable($path)) {
-        throw new RuntimeException('Missing private server configuration.');
-    }
-    $settings = parse_ini_file($path, false, INI_SCANNER_RAW);
-    if (!is_array($settings)) {
-        throw new RuntimeException('Invalid private server configuration.');
-    }
-    foreach ($settings as $key => $value) {
-        if (is_string($key) && is_scalar($value) && getenv($key) === false) {
-            putenv($key . '=' . (string) $value);
-        }
-    }
-}
-
 function env_required(string $name): string {
-    $value = getenv($name);
-    if ($value === false || trim($value) === '') {
-        throw new RuntimeException("Missing server setting: {$name}");
-    }
-    return trim($value);
+    return atradimai_env_required($name);
 }
 
 function json_response(int $status, array $payload): never {
@@ -86,12 +66,12 @@ function upload_contract(string $directory): ?array {
 function send_mail(string $recipient, string $replyTo, string $subject, string $body, ?array $attachment): void {
     $mail = new PHPMailer(true);
     $mail->isSMTP();
-    $mail->Host = env_required('SMTP_HOST');
-    $mail->Port = (int) env_required('SMTP_PORT');
+    $mail->Host = 'smtp.resend.com';
+    $mail->Port = 587;
     $mail->SMTPAuth = true;
-    $mail->Username = env_required('SMTP_USERNAME');
-    $mail->Password = env_required('SMTP_PASSWORD');
-    $mail->SMTPSecure = env_required('SMTP_ENCRYPTION');
+    $mail->Username = 'resend';
+    $mail->Password = env_required('RESEND_API_KEY');
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->CharSet = 'UTF-8';
     $mail->setFrom(env_required('MAIL_FROM_EMAIL'), getenv('MAIL_FROM_NAME') ?: 'Atradimai.lt');
     $mail->addAddress($recipient);
@@ -113,7 +93,8 @@ if (input('website_url') !== '') {
 }
 
 try {
-    load_server_config();
+    require_once __DIR__ . '/lib/server-config.php';
+    atradimai_load_server_config();
     $autoload = __DIR__ . '/vendor/autoload.php';
     if (!is_file($autoload)) {
         throw new RuntimeException('PHP dependencies are not installed.');

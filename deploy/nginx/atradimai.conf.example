@@ -9,6 +9,10 @@ server {
     listen 443 ssl http2;
     listen [::]:443 ssl http2;
     server_name www.atradimai.lt;
+
+    ssl_certificate /etc/letsencrypt/live/atradimai.lt/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/atradimai.lt/privkey.pem;
+
     return 301 https://atradimai.lt$request_uri;
 }
 

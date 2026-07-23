@@ -202,6 +202,11 @@
                                 <label for="news-email">El. pašto adresas</label>
                                 <input type="email" id="news-email" name="email" class="form-control" placeholder="pvz., vardas@pastas.lt" required>
                             </div>
+                            <div class="form-group" style="display: flex; gap: 0.5rem; align-items: flex-start;">
+                                <input type="checkbox" id="news-consent" name="newsletter" value="yes" required style="margin-top: 0.3rem;">
+                                <label for="news-consent" style="font-size: 0.85rem;">Sutinku gauti Atradimai.lt naujienas ir patarimus el. paštu.</label>
+                            </div>
+                            <input type="hidden" name="newsletter_consent_version" value="2026-07">
                             <button type="submit" class="btn btn-dark form-submit-btn">Prenumeruoti</button>
                         </form>
                     </div>
@@ -691,6 +696,7 @@
                         <!-- Simulated registration CTA -->
                         <form action="registracijos-patvirtinimas.html" method="POST" style="display:flex; gap:0.5rem; flex-wrap:wrap; justify-content:center; width:100%; max-width:500px; margin: 0 auto;">
     <input type="text" name="website_url" style="display:none" autocomplete="off">
+                            <input type="hidden" name="source" value="Pagrindinė registracija">
                             <input type="email" name="email" class="form-control" placeholder="Jūsų el. pašto adresas" required style="max-width:320px; background-color: var(--paper); border:none;">
                             <button type="submit" class="btn btn-primary" style="box-shadow:none;">Registruotis</button>
                         </form>

@@ -1,8 +1,6 @@
+.env
+/vendor/
+/private-data/
+/data/submissions.csv
+/data/uploads/
 .DS_Store
-Thumbs.db
-.gemini/
-mcp/
-node_modules/
-*.log
-*.zip
-*.tar.gz

@@ -67,17 +67,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. Interactive forms handler (AJAX submission to PHP backend with graceful fallback)
+    // 4. Interactive forms handler
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             const emailInput = form.querySelector('input[type="email"]');
             const redirectUrl = form.getAttribute('action');
-            let message = 'Ačiū! Formą sėkmingai gavome.';
-            
-            if (emailInput && emailInput.value) {
-                message = `Ačiū! Užklausą užregistravome el. paštu: ${emailInput.value}`;
+            const button = form.querySelector('button[type="submit"]');
+            const originalLabel = button ? button.textContent : '';
+            if (button) {
+                button.disabled = true;
+                button.textContent = 'Siunčiama…';
             }
 
             // Create form data for background send
@@ -87,23 +88,27 @@ document.addEventListener('DOMContentLoaded', () => {
             // Send form data asynchronously
             fetch('send-form.php', {
                 method: 'POST',
-                body: formData
+                body: formData,
+                headers: { Accept: 'application/json' }
             })
-            .then(response => {
-                // Form was processed by PHP server
-                alert(message);
+            .then(async response => {
+                const payload = await response.json().catch(() => ({}));
+                if (!response.ok || !payload.success) {
+                    throw new Error(payload.message || 'Nepavyko išsiųsti formos.');
+                }
                 form.reset();
-                if (redirectUrl) {
-                    window.location.href = redirectUrl;
+                if (payload.redirect || redirectUrl) {
+                    window.location.href = payload.redirect || redirectUrl;
                 }
             })
             .catch(err => {
-                // Fallback for static server / local filesystem without PHP support
-                console.warn('Form submission backend not available, falling back to static redirection.', err);
-                alert(message);
-                form.reset();
-                if (redirectUrl) {
-                    window.location.href = redirectUrl;
+                console.error('Form submission failed', err);
+                alert(err.message || 'Formos šiuo metu nepavyko išsiųsti.');
+            })
+            .finally(() => {
+                if (button) {
+                    button.disabled = false;
+                    button.textContent = originalLabel;
                 }
             });
         });

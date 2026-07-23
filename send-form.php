@@ -3,6 +3,22 @@ declare(strict_types=1);
 
 use PHPMailer\PHPMailer\PHPMailer;
 
+function load_server_config(): void {
+    $path = getenv('ATRADIMAI_CONFIG_PATH') ?: '/etc/atradimai/atradimai.env';
+    if (!is_readable($path)) {
+        throw new RuntimeException('Missing private server configuration.');
+    }
+    $settings = parse_ini_file($path, false, INI_SCANNER_RAW);
+    if (!is_array($settings)) {
+        throw new RuntimeException('Invalid private server configuration.');
+    }
+    foreach ($settings as $key => $value) {
+        if (is_string($key) && is_scalar($value) && getenv($key) === false) {
+            putenv($key . '=' . (string) $value);
+        }
+    }
+}
+
 function env_required(string $name): string {
     $value = getenv($name);
     if ($value === false || trim($value) === '') {
@@ -97,6 +113,7 @@ if (input('website_url') !== '') {
 }
 
 try {
+    load_server_config();
     $autoload = __DIR__ . '/vendor/autoload.php';
     if (!is_file($autoload)) {
         throw new RuntimeException('PHP dependencies are not installed.');

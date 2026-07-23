@@ -932,6 +932,8 @@ textarea.form-control {
     font-weight: 700;
     font-size: 0.9rem;
     border: 1px solid var(--line);
+    object-fit: cover;
+    flex: 0 0 40px;
 }
 
 .author-info h4 {
